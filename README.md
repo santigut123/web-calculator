@@ -1,0 +1,1 @@
+This project is intended to be a more challenging way to improve my Html, css and Javascript Skills. Although I am becoming more familiar with manipulating the dom using javascript, I am still not 100% comfortable with it.
