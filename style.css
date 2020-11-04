@@ -1,0 +1,71 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.box {
+  display: flex;
+
+  min-height: 100vh;
+  min-width: 100vw;
+  flex-direction: column;
+  background-color: burlywood;
+  align-content: center;
+}
+.header {
+  width: 100vw;
+  font-size: 5vh;
+  height: 10vh;
+  text-align: center;
+  font-weight: bold;
+  color: antiquewhite;
+  background-color: rgb(163, 134, 95);
+
+  -ms-text-size-adjust: 3;
+}
+
+.calculator {
+  display: grid;
+
+  width: 40vw;
+  height: 70vh;
+  align-self: center;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: 7.5vw 7.5vw 7.5vw 7.5vw 5vw 5vw;
+  grid-template-rows: 15vh 15vh 15vh 15vh;
+  font-size: 4vw;
+  background-color: saddlebrown;
+  color: antiquewhite;
+}
+.number-buttons {
+  grid-column: 1 / 5;
+  grid-row: 1/4;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-auto-rows: auto auto auto auto;
+}
+
+.operations {
+  display: grid;
+  grid-column: 5 / 7;
+  grid-row: 1 / 5;
+  grid-template-columns: 5vw 5vw;
+  grid-template-rows: 15vh 15vh 15vh 15vh;
+}
+#clear {
+  grid-column: 1/ 2;
+  grid-row: 4 / 5;
+  text-align: center;
+  font-size: 0.9em;
+}
+.display {
+  text-align: end;
+  background-color: rgb(218, 194, 163);
+  height: 10vh;
+  font-size: 10vh;
+}
