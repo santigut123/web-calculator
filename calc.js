@@ -35,7 +35,6 @@ function operate(operator,num1,num2){
   if(operator=="+")
   {
     return add(num1,num2);
-
   }
   else if(operator=="-")
   {
@@ -52,18 +51,7 @@ function operate(operator,num1,num2){
   else 
   {
     return multiply(num1,num2);
-
-
   }
-}
-function checkTerm(onTermOne,)
-{
-  
-  console.log(num);
-}
-function calculator()
-{
-  
 }
 
 let counter=0;
@@ -118,26 +106,39 @@ for(let i=0;i<numbers.length;i++){
         console.log(numOp);
         if(operators[i].id=="=")
         {
+          
+            
+          
           console.log(operate(operator,termOne,termTwo));
           display.textContent=Math.round(operate(operator,termOne,termTwo),5);
           termOne=operate(operator,termOne,termTwo);
-          termTwo="";
+          
           onTermOne=true;
           displayStringOne=termOne;
           displayStringTwo=termTwo;
+          
+          termTwo="";
+          numOp=0;
+          
         }
-        else if((numOp%2)==0|| numOp>2 &&onTermOne==false)
+        else if((numOp%2)==0|| numOp>2)
         {
           console.log(numOp+"one consol");
-          
-          termTwo=operate(operator,termOne,termTwo);
-          operator=operators[i].id;
-          display.textContent=termTwo;
-          termOne="";
           console.log(termOne+" TERMONE");
           console.log(termTwo+" TERMTWO");
-          onTermOne=true;
+          
+          termOne=operate(operator,termOne,termTwo);
+          operator=operators[i].id;
+          display.textContent=termOne;
+          termTwo="";
+          displayStringTwo="";
+          console.log(termOne+" TERMONE");
+          console.log(termTwo+" TERMTWO");
+          onTermOne=false;
+            
+          
           displayStringOne=termOne;
+          displayStringTwo=termTwo;
         }
         else if((numOp%2)==1)
         {
@@ -145,18 +146,10 @@ for(let i=0;i<numbers.length;i++){
           operator=operators[i].id;
        
           onTermOne=false;
-          
           console.log(termOne+" TERMONE");
           console.log(termTwo+" TERMTWO");
           
-          
-          
-          
         }
-        
-        
-       
-        
         
       });
     }
