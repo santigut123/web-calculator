@@ -115,11 +115,9 @@ for(let i=0;i<numbers.length;i++){
           
           onTermOne=true;
           displayStringOne=termOne;
-          displayStringTwo=termTwo;
-          
+          displayStringTwo="";
           termTwo="";
           numOp=0;
-          
         }
         else if((numOp%2)==0|| numOp>2)
         {
